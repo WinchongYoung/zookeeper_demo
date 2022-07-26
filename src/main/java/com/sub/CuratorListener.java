@@ -20,7 +20,7 @@ public class CuratorListener {
         String cachePath = "/super/thpffcj";
         //1、创建连接
         RetryPolicy retryPolicy = new ExponentialBackoffRetry(4000, 3);
-        CuratorFramework curatorFramework = CuratorFrameworkFactory.newClient("101.43.131.248:2181,101.43.131.248:2182,101.43.131.248:2183", 4000, 4000, retryPolicy);
+        CuratorFramework curatorFramework = CuratorFrameworkFactory.newClient("127.0.0.1:2183", 4000, 4000, retryPolicy);
 
         // 2、开启连接
         curatorFramework.start();
